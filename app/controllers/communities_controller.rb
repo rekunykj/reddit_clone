@@ -5,7 +5,9 @@ class CommunitiesController < ApplicationController
     @communities = Community.all
   end
 
-  def show; end
+  def show
+    @posts = @community.posts
+  end
 
   def create
     @community = Community.new community_values
